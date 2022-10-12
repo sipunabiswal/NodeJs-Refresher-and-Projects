@@ -5,3 +5,49 @@ Notes
 * using Node Core Modules
 * Working with Request and response(Basics)
 * Asynchronous code and the event loop
+
+Const : Change of data type willl not allow but it will allow change value of same type.
+
+Http import required to create server.
+i.e. 
+
+const http =require('http');
+/*
+
+//Normal function
+function requestListener(req,res){
+
+}
+
+http.createServer(requestListener);
+//eventdriven
+http.createServer(function(res,res){
+    
+});
+
+//Arrow function
+http.createServer((req,res)=>{}); //Most Prefred
+*/
+
+//Content headed required for the message content.
+
+res.setHeader('content-Type','text/html');
+
+
+oparatoer '===' is says if and only if then only it will return true.
+
+
+Note: 
+function requestListener(req,res)
+
+req is Request and res is response.
+
+
+const fs = require('fs');  is used for the file operation.
+
+
+Streams and Buffers
+Stream >> Request body part 1>>Request body part 2 >> Request body part 3>>Fully Parsed
+
+Buffers : are the place holder to support the multiple request body part.
+
