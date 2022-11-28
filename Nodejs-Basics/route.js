@@ -39,6 +39,7 @@ const requestHandler=(req, res)=>{
     res.write('<body><h1>Hello from Node Js Server</h1></body>');
     res.write('</html>');
     res.end();
+    
 }
 
 module.exports = requestHandler;
