@@ -1,0 +1,83 @@
+Notes
+* How dose the web works(Refreshers)?
+    user/Client>Domain(URL address)>>
+* Creating a NodeJs Server
+* using Node Core Modules
+* Working with Request and response(Basics)
+* Asynchronous code and the event loop
+
+Const : Change of data type willl not allow but it will allow change value of same type.
+
+Http import required to create server.
+i.e. 
+
+const http =require('http');
+/*
+
+//Normal function
+function requestListener(req,res){
+
+}
+
+http.createServer(requestListener);
+//eventdriven
+http.createServer(function(res,res){
+    
+});
+
+//Arrow function
+http.createServer((req,res)=>{}); //Most Prefred
+*/
+
+//Content headed required for the message content.
+
+res.setHeader('content-Type','text/html');
+
+
+oparatoer '===' is says if and only if then only it will return true.
+
+
+Note: 
+function requestListener(req,res)
+
+req is Request and res is response.
+
+
+const fs = require('fs');  is used for the file operation.
+
+
+Streams and Buffers
+Stream >> Request body part 1>>Request body part 2 >> Request body part 3>>Fully Parsed
+
+Buffers : are the place holder to support the multiple request body part.
+
+Event loop 
+Node.js is a single-threaded event-driven platform that is capable of running non-blocking, asynchronously programming. These functionalities of Node.js make it memory efficient. The event loop allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded. It is done by assigning operations to the operating system whenever and wherever possible.
+
+Most operating systems are multi-threaded and hence can handle multiple operations executing in the background. When one of these operations is completed, the kernel tells Node.js and the respective callback assigned to that operation is added to the event queue which will eventually be executed. This will be explained further in detail later in this topic.
+
+Features of Event Loop:
+
+Event loop is an endless loop, which waits for tasks, executes them and then sleeps until it receives more tasks.
+The event loop executes tasks from the event queue only when the call stack is empty i.e. there is no ongoing task.
+The event loop allows us to use callbacks and promises.
+The event loop executes the tasks starting from the oldest first.
+
+Behind the sceen.
+
+Single thread >>Eventloop>> Event call back>> Worker pool>> Diffrent thread >>
+order of Eventloop
+Timers : Set timeout callback
+Pending callback : Executes I/O related callbacks that were defferred
+Poll : retrive new I/O execute their call back
+Check : Setimmidiate callbacks
+Close callbacks : executes all close event call backs
+
+Processs.exit  when there are no more event handerler are regisered 
+
+Module Summery
+How the web workds?
+Program Life Cycle and event loop
+Asynchronous code
+Request and response
+
